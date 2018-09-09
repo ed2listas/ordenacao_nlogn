@@ -2,8 +2,9 @@
 #include <time.h>
 #include <stdlib.h>
 #include <graphics.h>
+#include <math.h>
 
-int gd = DETECT, gm;
+int gd = DETECT, gm, points = 100;
 
 #include "includes.h"
 
@@ -12,10 +13,21 @@ int gd = DETECT, gm;
 
 int main(int argc, char const *argv[])
 {
-  int option, points = 99, showSteps = 0, animDelay=100;
+  int option, showSteps = 0, animDelay=100;
   int *vector = NULL;
   double tempo;
 
+  /*int tm = 10;
+  int *vec = NULL;
+  vec = randomVector(vector, tm);
+  //int vec[10] = {164, 73, 45, 48, 301, 141, 187, 124, 200, 302};
+  printf("\n\nLista antes:\n");
+  printVector(vec, tm);
+  radixSort(vec, tm, 0, 100);
+  printf("\n\nLista depois:\n");
+  printVector(vec, tm);
+  printf("\n\n\nFIM\n");
+  getch();*/
   do {
     option = menu();
     vector = randomVector(vector, points);
@@ -24,30 +36,30 @@ int main(int argc, char const *argv[])
     printVector(vector, points);
 
     switch (option) {
-      case 1: //bubble sort
+      case 1: //radix sort
         showSteps = mostrarPassos();
-        tempo = bubbleSort(vector, points, showSteps, animDelay);
+        tempo = radixSort(vector, points, showSteps, animDelay);
         limparTela();
-        printf("tempo que o que o bubble sort demorou para ordenar %d valores: %lf\n segundos", points, tempo);
+        printf("tempo que o que o radix Sort demorou para ordenar %d valores: %lf\n segundos", points, tempo);
         printf("\n\nVetor ordenado\n");
         printVector(vector, points);
         getch();
         break;
-      case 2: //insertion sort
+      case 2: //quick sort
         showSteps = mostrarPassos();
-        tempo = insertionSort(vector, points, showSteps, animDelay);
+        tempo = quickSort(vector, 0, points, showSteps, animDelay);
         limparTela();
-        printf("tempo que o que o insertion Sort demorou para ordenar %d valores: %lf\n segundos", points, tempo);
-        printf("\nVetor ordenado:\n\n");
+        printf("tempo que o que o quick Sort demorou para ordenar %d valores: %lf\n segundos", points, tempo);
+        printf("\n\nVetor ordenado\n");
         printVector(vector, points);
         getch();
         break;
-      case 3: //selection sort
+      case 3: //merge sort
         showSteps = mostrarPassos();
-        tempo = selectionSort(vector, points, showSteps, animDelay);
+        tempo = mergeSort(vector, 0, points, showSteps, animDelay);
         limparTela();
-        printf("tempo que o que o selection Sort demorou para ordenar %d valores: %lf\n segundos", points, tempo);
-        printf("\nVetor ordenado:\n\n");
+        printf("tempo que o que o merge Sort demorou para ordenar %d valores: %lf\n segundos", points, tempo);
+        printf("\n\nVetor ordenado\n");
         printVector(vector, points);
         getch();
         break;

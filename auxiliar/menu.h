@@ -4,9 +4,9 @@ int menu() {
   printf("=======================\n");
   printf("= Digite uma opcao    =\n");
   printf("=======================\n");
-  printf("= 1) bubble sort      =\n");
-  printf("= 2) insertion sort   =\n");
-  printf("= 3) selection sort   =\n");
+  printf("= 1) radix sort lsd   =\n");
+  printf("= 2) quick sort       =\n");
+  printf("= 3) merge sort       =\n");
   printf("= 4) Comparar os tres =\n");
   printf("= 5) Configuracoes    =\n");
   printf("= 0) Sair             =\n");

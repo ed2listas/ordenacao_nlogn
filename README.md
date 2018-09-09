@@ -41,7 +41,7 @@ Entre na pasta do projeto com <br/>
 - cd algoritmo_ordenacao_lista2
 
 Compile o programa com <br/>
-- gcc main.c -o saida -lgraph
+- gcc main.c -o saida -lgraph -lm
 
 E finalmente execute o programa com <br/>
 - ./saida

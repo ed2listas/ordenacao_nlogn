@@ -9,7 +9,7 @@
 #include "op_vectors/randomVector.h"
 #include "op_vectors/configurations.h"
 
-#include "sort/insertionSort.h"
-#include "sort/selectionSort.h"
-#include "sort/bubbleSort.h"
+#include "sort/radixSort.h"
+#include "sort/quickSort.h"
+#include "sort/mergeSort.h"
 #include "sort/comparaTempo.h"

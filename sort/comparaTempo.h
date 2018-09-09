@@ -20,7 +20,7 @@ void comyVector(int *v1, int *v2, int size) {
 }
 
 void compararTempos(int size){
-    int *vector_in = 0;
+    /*int *vector_in = 0;
     int *vector_se = 0;
     int *vector_bu = 0;
     double *tempo = 0;
@@ -33,8 +33,8 @@ void compararTempos(int size){
     vector_bu = (int *)malloc(size*sizeof(int));
     comyVector(vector_bu, vector_in, size);
 
-    tempo_in = insertionSort(vector_in, size, 0, 0);
-    tempo_se = selectionSort(vector_se, size, 0, 0);
+    //tempo_in = insertionSort(vector_in, size, 0, 0);
+    //tempo_se = selectionSort(vector_se, size, 0, 0);
     tempo_bu =  bubbleSort(vector_bu, size, 0 ,0);
 
     tempo[0] = tempo_in;
@@ -53,6 +53,6 @@ void compararTempos(int size){
         else if(tempo_se == tempo[i]){
             printf("%dº lugar Selection Sort com: %lf segundos\n",i + 1, tempo[i]);
         }
-    }
+    }*/
     getch();
 }

@@ -20,39 +20,39 @@ void comyVector(int *v1, int *v2, int size) {
 }
 
 void compararTempos(int size){
-    /*int *vector_in = 0;
-    int *vector_se = 0;
-    int *vector_bu = 0;
+    int *vector_mer = 0;
+    int *vector_qui = 0;
+    int *vector_ra = 0;
     double *tempo = 0;
     tempo = (double *)malloc(3*sizeof(double));;
-    double tempo_in , tempo_se, tempo_bu;
+    double tempo_mer , tempo_qui, tempo_ra;
 
-    vector_in = randomVector(vector_in, size);
-    vector_se = (int *)malloc(size*sizeof(int));
-    comyVector(vector_se, vector_in, size);
-    vector_bu = (int *)malloc(size*sizeof(int));
-    comyVector(vector_bu, vector_in, size);
+    vector_mer = randomVector(vector_mer, size);
+    vector_qui = (int *)malloc(size*sizeof(int));
+    comyVector(vector_qui, vector_mer, size);
+    vector_ra = (int *)malloc(size*sizeof(int));
+    comyVector(vector_ra, vector_mer, size);
 
-    //tempo_in = insertionSort(vector_in, size, 0, 0);
-    //tempo_se = selectionSort(vector_se, size, 0, 0);
-    tempo_bu =  bubbleSort(vector_bu, size, 0 ,0);
+    tempo_mer = mergeSort(vector_mer,0, size, 0, 0);
+    tempo_qui = quickSort(vector_qui,0, size, 0, 0);
+    tempo_ra =  radixSort(vector_ra, size, 0 ,0);
 
-    tempo[0] = tempo_in;
-    tempo[1] = tempo_se;
-    tempo[2] = tempo_bu;
+    tempo[0] = tempo_mer;
+    tempo[1] = tempo_qui;
+    tempo[2] = tempo_ra;
 
     ordena(tempo,3);
     printf("Total de pontos: %d\n\n", size);
     for(int i = 0; i < 3; i++){
-        if(tempo_in == tempo[i]){
-            printf("%dº lugar Insertion Sort com: %lf segundos\n",i + 1, tempo[i]);
+        if(tempo_mer == tempo[i]){
+            printf("%dº lugar Merge Sort com: %lf segundos\n",i + 1, tempo[i]);
         }
-        else if(tempo_bu == tempo[i]){
-            printf("%dº lugar Bubble Sort com: %lf segundos\n",i + 1, tempo[i]);
+        else if(tempo_ra == tempo[i]){
+            printf("%dº lugar Radix Sort com: %lf segundos\n",i + 1, tempo[i]);
         }
-        else if(tempo_se == tempo[i]){
-            printf("%dº lugar Selection Sort com: %lf segundos\n",i + 1, tempo[i]);
+        else if(tempo_qui == tempo[i]){
+            printf("%dº lugar Quick Sort com: %lf segundos\n",i + 1, tempo[i]);
         }
-    }*/
+    }
     getch();
 }
